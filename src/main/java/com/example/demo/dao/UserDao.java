@@ -8,6 +8,5 @@ import java.util.List;
 
 @Service
 public interface UserDao {
-    @Select("select * from demo.user;")
     List<User> findAll();
 }
