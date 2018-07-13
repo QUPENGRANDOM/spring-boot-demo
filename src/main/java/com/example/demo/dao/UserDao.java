@@ -9,4 +9,5 @@ import java.util.List;
 @Service
 public interface UserDao {
     List<User> findAll();
+    User findOneById(int id);
 }

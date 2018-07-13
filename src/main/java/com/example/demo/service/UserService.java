@@ -15,4 +15,8 @@ public class UserService {
     public List<User> listUser(){
         return userDao.findAll();
     }
+
+    public User getUserById(int id){
+        return userDao.findOneById(id);
+    }
 }
