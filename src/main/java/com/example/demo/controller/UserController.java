@@ -29,7 +29,7 @@ public class UserController {
     }
 
     @ApiOperation(value="获取所有用户信息", notes="获取所有用户信息")
-    @ApiImplicitParam(name = "userId", value = "用户ID", required = true, dataType = "Integer", paramType = "path")
+    @ApiImplicitParam(name = "userId", value = "用户ID", required = true, dataType = "int", paramType = "path")
     @GetMapping(value = "/{userId}",produces = {"application/json;charset=UTF-8"})
     public User getAllUser(@PathVariable(value = "userId") int userId){
         return userService.getUserById(userId);
