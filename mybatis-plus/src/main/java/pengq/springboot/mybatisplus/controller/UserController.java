@@ -43,8 +43,8 @@ public class UserController {
 
     @ApiOperation("用户登录")
     @ApiImplicitParams({
-            @ApiImplicitParam(paramType = "query", dataType = "String", name = "username", value = "登录名"),
-            @ApiImplicitParam(paramType = "query", dataType = "String", name = "password", value = "登录密码")
+            @ApiImplicitParam(paramType = "query", dataType = "String", name = "username", value = "登录名",required = true),
+            @ApiImplicitParam(paramType = "query", dataType = "String", name = "password", value = "登录密码",required = true)
     })
     @PostMapping(value = "/v1/users/login", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
     public Object login(@RequestParam(name = "username") String username,
