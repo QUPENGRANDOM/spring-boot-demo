@@ -22,6 +22,7 @@ public class Swagger2Config {
         return new Docket(DocumentationType.SWAGGER_2)
                 .apiInfo(apiInfo())
                 .select()
+                //swagger 的扫描路径，这里指的是生成该路径下所以类的文档
                 .apis(RequestHandlerSelectors.basePackage("pengq.springboot.mybatisplus.controller"))
                 .paths(PathSelectors.any())
                 .build();
