@@ -4,25 +4,43 @@ import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 
 import java.io.Serializable;
 import java.util.Date;
+@ApiModel("用户实体")
 @TableName("users")
 public class Users implements Serializable {
+    @ApiModelProperty(value = "主键")
     @TableId(type = IdType.AUTO)
     private Integer id;
+
+    @ApiModelProperty(value = "用户名")
     @TableField(value = "username")
     private String username;
+
+    @ApiModelProperty(value = "密码")
     @TableField(value = "password")
     private String password;
+
+    @ApiModelProperty(value = "头像")
     @TableField(value = "avatar")
     private String avatar;
+
+    @ApiModelProperty(value = "昵称")
     @TableField(value = "nickname")
     private String nickname;
+
+    @ApiModelProperty(value = "性别 0-男 1-女")
     @TableField(value = "sex")
-    private Boolean sex;
+    private int sex;
+
+    @ApiModelProperty(value = "账号状态 false-禁用 true-启用")
     @TableField(value = "status")
     private Boolean status;
+
+    @ApiModelProperty(value = "创建时间")
     @TableField(value = "create_time")
     private Date createTime;
 
@@ -68,11 +86,11 @@ public class Users implements Serializable {
         this.nickname = nickname;
     }
 
-    public Boolean getSex() {
+    public int getSex() {
         return sex;
     }
 
-    public void setSex(Boolean sex) {
+    public void setSex(int sex) {
         this.sex = sex;
     }
 

@@ -29,7 +29,7 @@ public class MybatisPlusTest {
         userItem.setUsername("pengq");
         userItem.setPassword("admin");
         userItem.setAvatar("sada");
-        userItem.setSex(true);
+        userItem.setSex(1);
         userItem.setStatus(false);
         userItem.setCreateTime(new Date());
         //插入
